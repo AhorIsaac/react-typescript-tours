@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, FC, ReactElement } from "react";
 import { ToursProps } from "./app.types";
 import Loading from "./Loading";
 import Tours from "./Tours";
 
 const url = "https://course-api.com/react-tours-project";
 
-const App = () => {
+const App : FC = () : ReactElement => {
   const [loading, setLoading] = useState<boolean>(true);
   const [tours, setTours] = useState<ToursProps>([]);
 

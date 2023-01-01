@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, FC, ReactElement } from "react";
 import { TourComponentProps } from "./app.types";
 
-const Tour = ({
+const Tour : FC<TourComponentProps> = ({
   id,
   name,
   info,
   image,
   price,
   removeTour,
-}: TourComponentProps) => {
+}: TourComponentProps) : ReactElement => {
   const [readMore, setReadMore] = useState<boolean>(false);
 
   return (
-    <article className="single-tour">
+    <article className="single-tour glassmorphism">
       <img src={image} alt={name} />
       <footer>
         <div className="tour-info">
@@ -25,7 +25,7 @@ const Tour = ({
             {readMore ? "show less" : "read more"}
           </button>
         </p>
-        <button onClick={() => removeTour(id)} type="button" className="delete-btn">
+        <button onClick={() => removeTour(id)} type="button" className="button-29">
           not interested
         </button>
       </footer>

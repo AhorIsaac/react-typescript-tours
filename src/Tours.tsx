@@ -1,8 +1,11 @@
-import React from "react";
+import React, { FC, ReactElement } from "react";
 import { ToursComponentProps } from "./app.types";
 import Tour from "./Tour";
 
-const Tours = ({ tours, removeTour }: ToursComponentProps) => {
+const Tours: FC<ToursComponentProps> = ({
+  tours,
+  removeTour,
+}: ToursComponentProps): ReactElement => {
   return (
     <section>
       <div className="title">
